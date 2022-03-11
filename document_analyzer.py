@@ -26,6 +26,11 @@ for word in words:
 i = 0
 frequent_key = []
 frequent_value = []
+frequent_dict = {}
+
+myList = []
+
+
 for freq in sorted(count, key=count.get, reverse=True):
 	if(i<5):
 		frequent_key.append(freq)
@@ -33,10 +38,18 @@ for freq in sorted(count, key=count.get, reverse=True):
 
 for key in frequent_key: 
 	frequent_value.append(count[key])
+	
+for key in frequent_key: 
+	frequent_dict[key] = count[key]
+	
+l = []
+for k, v in frequent_dict.items():
+	l.append((k,v))
+	
+l = sorted(l, key=lambda e: (-e[1], e[0]))
+for e in l:
+	print(f'{e[0]}: {e[1]}')
 
-print()
-for i in range(5):
-	print(f'{frequent_key[i]}: {frequent_value[i]}')
 
 
 
