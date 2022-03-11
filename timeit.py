@@ -6,7 +6,7 @@ def calculate_time(func):
 		func()
 		y=time.time()
 		z = y-x
-		return z
+		print(f'Total time {z}') 
 	return wrapper
 
 	
