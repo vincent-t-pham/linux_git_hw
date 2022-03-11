@@ -34,6 +34,7 @@ for freq in sorted(count, key=count.get, reverse=True):
 for key in frequent_key: 
 	frequent_value.append(count[key])
 
+print()
 for i in range(5):
 	print(f'{frequent_key[i]}: {frequent_value[i]}')
 
