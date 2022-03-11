@@ -47,6 +47,7 @@ for k, v in frequent_dict.items():
 	l.append((k,v))
 	
 l = sorted(l, key=lambda e: (-e[1], e[0]))
+print()
 for e in l:
 	print(f'{e[0]}: {e[1]}')
 
